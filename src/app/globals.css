@@ -1,13 +1,8 @@
 :root {
-  --background: #ffffff;
+  --background: #b0bdff;
   --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --gui: #8a9aea;
+  --gui-hover: #8091e7;
 }
 
 html,
@@ -36,7 +31,36 @@ a {
 }
 
 @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #10002a;
+    --foreground: #ededed;
+    --gui: #00175b;
+    --gui-hover: #01207c;
+  }
   html {
     color-scheme: dark;
+  }
+}
+
+.page {
+  display: flex;
+  flex-direction: row;
+  > * {
+    height: 100vh;
+    padding: 0.5em;
+  }
+}
+
+.sidebar {
+  width: 10em;
+  padding: 0;
+  margin: 0;
+  background-color: var(--gui);
+  a {
+    display: block;
+    padding: 0.5em;
+  }
+  a:hover {
+    background-color: var(--gui-hover);
   }
 }
